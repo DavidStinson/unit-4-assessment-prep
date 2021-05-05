@@ -13,7 +13,3 @@ class CreateWish(CreateView):
   fields = '__all__'
   template_name = 'add.html'
   success_url = '/'
-
-def delete(request, id):
-  Wishlist.objects.get(id=id).delete()
-  return redirect('/')

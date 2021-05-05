@@ -5,7 +5,22 @@
 {% if wishlist|length == 0 %}
   <h2>No wishes yet!</h2>
 {% else %}
-
+  <table class="pure-table pure-table-striped">
+    <thead>
+      <tr>
+        <th>Wish</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for wish in wishlist %}
+        <tr>
+          <td>{{wish.name}}</td>
+          <td><a>X</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 {% endif %}
 <hr>
 <a href="{% url 'add_wish' %}" class="pure-button">Add Wish</a>
