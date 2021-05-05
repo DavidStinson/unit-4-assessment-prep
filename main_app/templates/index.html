@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Wish List Items</h1>
+{% if wishlist|length == 0 %}
+  <h2>No wishes yet!</h2>
+{% else %}
+
+{% endif %}
+<hr>
+<a href="{% url 'add_wish' %}" class="pure-button">Add Wish</a>
+{% endblock %}

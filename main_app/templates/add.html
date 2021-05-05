@@ -1,0 +1,13 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<h1>Add a Wish</h1>
+<hr />
+
+<form action="" method="POST" class="pure-form">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="pure-button">Add this wish!</button>
+</form>
+
+{% endblock %}
